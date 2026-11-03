@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff5d9">
+  <title>Para Raíssa 🌻</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
+    :root{--cream:#fff8e9;--gold:#f5c95d;--ink:#765637;--pink:#d97978;--green:#718b58}
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;overflow:hidden}
+    body{min-height:100svh;display:grid;place-items:center;position:relative;background:linear-gradient(180deg,#fff9e9 0%,#fff0ce 58%,#f6e6b9 100%);color:var(--ink);font-family:'DM Sans',sans-serif}
+    .glow{position:absolute;width:min(75vw,650px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,220,120,.42),rgba(255,230,165,.12) 48%,transparent 70%);top:2%;left:50%;transform:translateX(-50%);pointer-events:none}
+    .sun{position:absolute;top:8%;right:12%;width:clamp(74px,13vw,126px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 32%,#fff5b7,#ffd66d 65%,#f4bd4c);box-shadow:0 0 0 12px #ffd96b22,0 0 55px #ffc94b88;animation:sunFloat 5s ease-in-out infinite}
+    .sun:before{content:"";position:absolute;inset:-18px;border:2px dashed #efbd55aa;border-radius:50%;animation:spin 35s linear infinite}
+    .sun:after{content:"";position:absolute;inset:22%;border-radius:50%;background:#fff1a4;filter:blur(13px)}
+    .scene{position:relative;z-index:2;width:min(90vw,760px);padding:clamp(34px,7vw,70px) 24px;text-align:center;animation:arrive 1.4s cubic-bezier(.2,.8,.2,1) both}
+    .eyebrow{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:#a58a5b;margin:0 0 22px;opacity:0;animation:fadeUp .9s .35s forwards}
+    h1{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(2.55rem,8vw,5.6rem);line-height:1.12;letter-spacing:-.045em;margin:0;color:#80603d;text-shadow:0 3px 20px #fff8df;opacity:0;animation:fadeUp 1.1s .65s forwards}
+    h1 span{display:block;color:var(--pink);font-weight:600;margin-top:8px}
+    .heart{display:inline-block;font-family:sans-serif;font-size:.78em;vertical-align:8%;margin-left:5px;filter:drop-shadow(0 5px 8px #d9797850);animation:heartbeat 1.8s 2s ease-in-out infinite}
+    .ornament{display:flex;justify-content:center;align-items:center;gap:13px;margin:30px auto 0;color:#c69a48;opacity:0;animation:fadeUp .9s 1.15s forwards}
+    .ornament:before,.ornament:after{content:"";height:1px;width:54px;background:linear-gradient(90deg,transparent,#d8b66e)}
+    .ornament:after{transform:scaleX(-1)}
+    .tiny-note{margin:17px 0 0;font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(.95rem,2.5vw,1.12rem);color:#a68a63;opacity:0;animation:fadeUp .9s 1.4s forwards}
+    .bee{position:absolute;z-index:3;font-size:clamp(22px,3vw,31px);filter:drop-shadow(0 5px 5px #9a713533);animation:beeFly 13s ease-in-out infinite}
+    .bee.one{top:25%;left:9%}.bee.two{right:12%;bottom:29%;font-size:25px;animation-delay:-6s;animation-duration:16s}
+    .bee.three{top:16%;left:45%;font-size:19px;animation-delay:-9s;animation-duration:18s}
+    .flower{position:absolute;z-index:1;bottom:-18px;width:clamp(125px,23vw,220px);transform-origin:bottom center;animation:sway 5s ease-in-out infinite}
+    .flower.left{left:-15px}.flower.right{right:-18px;transform:scaleX(-1);animation-delay:-2s}
+    .flower svg{display:block;width:100%;height:auto;overflow:visible}
+    .petal{transform-box:fill-box;transform-origin:center;animation:petal 4s ease-in-out infinite}
+    .flower.right .petal{animation-delay:-1.3s}
+    .floating{position:absolute;color:#e4b84f88;font-size:18px;animation:drift 8s ease-in-out infinite;pointer-events:none}
+    .f1{left:20%;top:18%}.f2{right:27%;top:68%;animation-delay:-3s}.f3{left:70%;top:25%;animation-delay:-5s}
+    @keyframes arrive{from{opacity:0;transform:translateY(22px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+    @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+    .eyebrow,.ornament,.tiny-note{transform:translateY(12px)}
+    @keyframes heartbeat{0%,100%{transform:scale(1)}12%{transform:scale(1.2)}24%{transform:scale(1)}36%{transform:scale(1.13)}48%{transform:scale(1)}}
+    @keyframes sunFloat{50%{transform:translate(0,9px)}}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @keyframes sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(3deg)}}
+    @keyframes petal{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(3deg)}}
+    @keyframes beeFly{0%,100%{transform:translate(0,0) rotate(-8deg)}25%{transform:translate(24px,-18px) rotate(8deg)}55%{transform:translate(48px,8px) rotate(-3deg)}80%{transform:translate(17px,22px) rotate(10deg)}}
+    @keyframes drift{0%,100%{transform:translateY(0) rotate(0);opacity:.5}50%{transform:translateY(-17px) rotate(18deg);opacity:1}}
+    @media(max-width:520px){.sun{top:7%;right:7%}.scene{padding:20px 14px 70px}.flower{width:145px;bottom:-6px}.flower.left{left:-32px}.flower.right{right:-32px}.bee.one{left:5%;top:29%}.bee.two{right:5%;bottom:25%}.eyebrow{letter-spacing:.2em}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <div class="glow" aria-hidden="true"></div>
+  <div class="sun" aria-hidden="true"></div>
+  <span class="floating f1" aria-hidden="true">✦</span><span class="floating f2" aria-hidden="true">✧</span><span class="floating f3" aria-hidden="true">✦</span>
+  <span class="bee one" aria-hidden="true">🐝</span><span class="bee two" aria-hidden="true">🐝</span><span class="bee three" aria-hidden="true">🐝</span>
+  <main class="scene">
+    <p class="eyebrow">um carinho só para você</p>
+    <h1>Estou com saudades,<span>eu te amo <b class="heart">♥</b></span></h1>
+    <div class="ornament" aria-hidden="true">✿</div>
+    <p class="tiny-note">Com todo o meu carinho, Raíssa.</p>
+  </main>
+  <div class="flower left" aria-hidden="true">
+    <svg viewBox="0 0 220 290" role="img">
+      <path d="M105 150 Q92 210 108 290" fill="none" stroke="#668454" stroke-width="8" stroke-linecap="round"/>
+      <path d="M104 220 Q50 184 35 218 Q63 248 104 220" fill="#8ba66c" stroke="#668454" stroke-width="2"/>
+      <path d="M108 250 Q158 207 178 238 Q151 270 108 250" fill="#9ab477" stroke="#668454" stroke-width="2"/>
+      <g transform="translate(108 105)">
+        <g fill="#f4bd43" stroke="#e7a92d" stroke-width="1.5">
+          <ellipse class="petal" cy="-48" rx="17" ry="34"/><ellipse class="petal" cy="-48" rx="17" ry="34" transform="rotate(45)"/><ellipse class="petal" cy="-48" rx="17" ry="34" transform="rotate(90)"/><ellipse class="petal" cy="-48" rx="17" ry="34" transform="rotate(135)"/><ellipse class="petal" cy="-48" rx="17" ry="34" transform="rotate(180)"/><ellipse class="petal" cy="-48" rx="17" ry="34" transform="rotate(225)"/><ellipse class="petal" cy="-48" rx="17" ry="34" transform="rotate(270)"/><ellipse class="petal" cy="-48" rx="17" ry="34" transform="rotate(315)"/>
+        </g><circle r="29" fill="#76502d"/><circle r="23" fill="#8e6030"/><g fill="#d6a04a"><circle cx="-10" cy="-8" r="2.5"/><circle cx="7" cy="-13" r="2"/><circle cx="12" cy="5" r="2.5"/><circle cx="-5" cy="12" r="2"/><circle cx="-15" cy="4" r="2"/></g>
+      </g>
+    </svg>
+  </div>
+  <div class="flower right" aria-hidden="true">
+    <svg viewBox="0 0 220 290">
+      <path d="M105 150 Q92 210 108 290" fill="none" stroke="#668454" stroke-width="8" stroke-linecap="round"/>
+      <path d="M104 220 Q50 184 35 218 Q63 248 104 220" fill="#8ba66c" stroke="#668454" stroke-width="2"/>
+      <path d="M108 250 Q158 207 178 238 Q151 270 108 250" fill="#9ab477" stroke="#668454" stroke-width="2"/>
+      <g transform="translate(108 105)">
+        <g fill="#f4bd43" stroke="#e7a92d" stroke-width="1.5">
+          <ellipse class="petal" cy="-48" rx="17" ry="34"/><ellipse class="petal" cy="-48" rx="17" ry="34" transform="rotate(45)"/><ellipse class="petal" cy="-48" rx="17" ry="34" transform="rotate(90)"/><ellipse class="petal" cy="-48" rx="17" ry="34" transform="rotate(135)"/><ellipse class="petal" cy="-48" rx="17" ry="34" transform="rotate(180)"/><ellipse class="petal" cy="-48" rx="17" ry="34" transform="rotate(225)"/><ellipse class="petal" cy="-48" rx="17" ry="34" transform="rotate(270)"/><ellipse class="petal" cy="-48" rx="17" ry="34" transform="rotate(315)"/>
+        </g><circle r="29" fill="#76502d"/><circle r="23" fill="#8e6030"/><g fill="#d6a04a"><circle cx="-10" cy="-8" r="2.5"/><circle cx="7" cy="-13" r="2"/><circle cx="12" cy="5" r="2.5"/><circle cx="-5" cy="12" r="2"/><circle cx="-15" cy="4" r="2"/></g>
+      </g>
+    </svg>
+  </div>
+</body>
+</html>
